@@ -1,4 +1,107 @@
-@import './vendor/normalize';
-@import './partials/base';
+@import "./vendor/normalize";
+@import "./partials/base";
+
+@media (min-width: 720px) {
+  background-color: grey;
+}
+
+.navbar {
+  flex-direction: row;
+
+  .nav {
+    padding: 10px;
+  }
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    text-align: center;
+
+    h1 {
+      font-size: 4em;
+    }
+  }
+
+  .sidebar {
+    min-width: 100px;
+    background-color: white;
+  }
+
+  .main-container {
+    display: flex;
+  }
+
+  .post,
+  .sidebar {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .post {
+    background-color: #f9f9f9;
+
+    .sidebar {
+      background-color: white;
+
+      @media screen and (max-width: 1024px) {
+        background-color: grey;
+      }
+
+      .nav-links {
+        flex-direction: column;
+      }
+
+      .container {
+        h1 {
+          font-size: 4em;
+        }
+      }
+
+      .mixed-layout {
+        display: flex;
+      }
+
+      .first,
+      .section-a {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+
+      .first {
+        flex-direction: column;
+        background-color: #f9f9f9;
+      }
+
+      .section-a {
+        flex-direction: column;
+        background-color: #e0e0e0;
+      }
+
+      .second {
+        display: flex;
+        flex-direction: column;
+
+        .section-b {
+          flex-direction: column;
+          background-color: #1e0577;
+        }
+      }
+    }
+  }
+}
 
 // Class assignment code below this line
